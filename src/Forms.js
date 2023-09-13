@@ -96,8 +96,3 @@ export default  class Forms extends React.Component{
     return <img src={Econ} width="130px" height="130px"/>
   }
 
-
-  /*<Input defaultValue="Hello world" inputProps={ariaLabel} />
-<Input placeholder="Placeholder" inputProps={ariaLabel} />
-<Input disabled defaultValue="Disabled" inputProps={ariaLabel} />
-<Input defaultValue="Error" error inputProps={ariaLabel} />*/
