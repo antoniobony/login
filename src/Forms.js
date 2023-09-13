@@ -20,7 +20,10 @@ export default  class Forms extends React.Component{
       })
       console.log(this.state.username.toString())
     }
-
+    Handleclick=(event)=>{
+    event.preventDefault()
+    }
+    
     render()
     {
       return(
