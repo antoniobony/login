@@ -1,0 +1,265 @@
+//A button object calls the function:
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
+/**
+ class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      age: null,
+    };
+  }
+  myChangeHandler = (event) => {
+    let nam = event.target.name;
+    let val = event.target.value;
+    this.setState({[nam]: val});
+  }
+  render() {
+    return (
+      <form>
+      <h1>Hello {this.state.username} {this.state.age}</h1>
+      <p>Enter your name:</p>
+      <input
+        type='text'
+        name='username'
+        onChange={this.myChangeHandler}
+      />
+      <p>Enter your age:</p>
+      <input
+        type='text'
+        name='age'
+        onChange={this.myChangeHandler}
+      />
+      </form>
+    );
+  }
+}
+
+
+
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { username: '' };
+  }
+  myChangeHandler = (event) => {
+    this.setState({username: event.target.value});
+  }
+  render() {
+    let header = '';
+    if (this.state.username) {
+      header = <h1>Hello {this.state.username}</h1>;
+    } else {
+      header = '';
+    }
+    return (
+      <form>
+      {header}
+      <p>Enter your name:</p>
+      <input
+        type='text'
+        onChange={this.myChangeHandler}
+      />
+      </form>
+    );
+  }
+}
+
+ReactDOM.render(<Header favcol="yellow"/>, document.getElementById('root'));
+ 
+const a=['antonio','bony','kodahy']
+const li=a.map((i,k)=><li keys={k}>{i}</li>)
+function Tri({item})
+{
+  return(
+    <Fragment>
+      <dt>{item.term}</dt>
+      <dt>{item.description}</dt>
+    </Fragment>
+  );
+}
+
+class Ads extends React.Component{
+  constructor(props){
+    super(props)
+  }
+  render()
+  {
+    return(
+      <dl>
+        {this.props.items.map(item => (<Tri item={item} key={item.id}/>))}
+      </dl>
+    )
+  }  
+}
+
+  return (
+    <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <div>
+        <TextField
+          required
+          id="outlined-required"
+          label="Required"
+          defaultValue="Hello World"
+        />
+        <TextField
+          disabled
+          id="outlined-disabled"
+          label="Disabled"
+          defaultValue="Hello World"
+        />
+        <TextField
+          id="outlined-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+        />
+        <TextField
+          id="outlined-read-only-input"
+          label="Read Only"
+          defaultValue="Hello World"
+          InputProps={{
+            readOnly: true,
+          }}
+        />
+        <TextField
+          id="outlined-number"
+          label="Number"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+        <TextField id="outlined-search" label="Search field" type="search" />
+        <TextField
+          id="outlined-helperText"
+          label="Helper text"
+          defaultValue="Default Value"
+          helperText="Some important text"
+        />
+      </div>
+      <div>
+        <TextField
+          required
+          id="filled-required"
+          label="Required"
+          defaultValue="Hello World"
+          variant="filled"
+        />
+        <TextField
+          disabled
+          id="filled-disabled"
+          label="Disabled"
+          defaultValue="Hello World"
+          variant="filled"
+        />
+        <TextField
+          id="filled-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+          variant="filled"
+        />
+        <TextField
+          id="filled-read-only-input"
+          label="Read Only"
+          defaultValue="Hello World"
+          InputProps={{
+            readOnly: true,
+          }}
+          variant="filled"
+        />
+        <TextField
+          id="filled-number"
+          label="Number"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="filled"
+        />
+        <TextField
+          id="filled-search"
+          label="Search field"
+          type="search"
+          variant="filled"
+        />
+        <TextField
+          id="filled-helperText"
+          label="Helper text"
+          defaultValue="Default Value"
+          helperText="Some important text"
+          variant="filled"
+        />
+      </div>
+      <div>
+        <TextField
+          required
+          id="standard-required"
+          label="Required"
+          defaultValue="Hello World"
+          variant="standard"
+        />
+        <TextField
+          disabled
+          id="standard-disabled"
+          label="Disabled"
+          defaultValue="Hello World"
+          variant="standard"
+        />
+        <TextField
+          id="standard-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+          variant="standard"
+        />
+        <TextField
+          id="standard-read-only-input"
+          label="Read Only"
+          defaultValue="Hello World"
+          InputProps={{
+            readOnly: true,
+          }}
+          variant="standard"
+        />
+        <TextField
+          id="standard-number"
+          label="Number"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="standard"
+        />
+        <TextField
+          id="standard-search"
+          label="Search field"
+          type="search"
+          variant="standard"
+        />
+        <TextField
+          id="standard-helperText"
+          label="Helper text"
+          defaultValue="Default Value"
+          helperText="Some important text"
+          variant="standard"
+        />
+      </div>
+    </Box>
+  );
+}
+
+
+*/
