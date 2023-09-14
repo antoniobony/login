@@ -7,7 +7,7 @@ export default class Field extends React.Component{
     }
     render()
     {
-      const {onchange,label,name,type}=this.props
+      const {onChange,label,name,type}=this.props
       return(
         <div>   
            <TextField
@@ -16,7 +16,7 @@ export default class Field extends React.Component{
           label={label}
           type={type}
           fullWidth
-          onChange={onchange}
+          onChange={onChange}
         />
         </div>
       )
