@@ -12,7 +12,7 @@ export default class Field extends React.Component{
         <div>   
            <TextField
           required
-          id={name}
+          name={name}
           label={label}
           type={type}
           fullWidth
