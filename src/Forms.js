@@ -65,8 +65,8 @@ export default  class Forms extends React.Component{
           noValidate
           autoComplete="off"
           >
-              <Field name='username' label='Username' type='text'/>
-              <Field name='password' label='Password' type='password'/>
+              <Field name='username' label='Username' type='text'onChange={this.Change}/>
+              <Field name='password' label='Password' type='password'onChange={this.Change}/>
               <Link href="#" variant="body2" underline='none' textAlign='center' >
                   {"Forgot password"}
                 </Link>
