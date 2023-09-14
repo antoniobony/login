@@ -7,23 +7,45 @@ import { Typography } from '@mui/material';
 import  Econ from './Econ.jpg';
 export default  class Forms extends React.Component{
     constructor(props){
-      super(props)
+      super(props);
      this.state={
       username:'',
       password:'',
-     }
+      errormessage:'',
+      c:0
     }
+    }
+
     Change=(event)=>{
       const name=event.target.name;
       this.setState({
       [name]:event.target.value 
       })
-      console.log(this.state.username.toString())
+      console.log(this.state.username)
     }
+        
     Handleclick=(event)=>{
-    event.preventDefault()
-    }
-    
+      this.setState({
+        errormessage:'',
+        c:0 
+        })
+      this.c=0
+      event.preventDefault()
+      if(this.state.username==="")
+      {
+        this.setState((state)=>({
+          errormessage:'**Please put your username', 
+          c:state.c+1  
+        }))
+      }
+      if(this.state.password===""){
+        this.setState((state)=>({
+          errormessage:'**Please put your password', 
+          c:state.c+1  
+        }))
+      }
+      }
+      
     render()
     {
       return(
@@ -33,7 +55,7 @@ export default  class Forms extends React.Component{
             margin:'auto',
             marginTop:5,
             width:'50ch',
-            height:'55ch',
+            height:'58ch',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -65,7 +87,7 @@ export default  class Forms extends React.Component{
           noValidate
           autoComplete="off"
           >
-              <Field name='username' label='Username' type='text'onChange={this.Change}/>
+              <Field name='username' label='Username' type='text' onChange={this.Change}/>
               <Field name='password' label='Password' type='password'onChange={this.Change}/>
               <Link href="#" variant="body2" underline='none' textAlign='center' >
                   {"Forgot password"}
@@ -74,6 +96,15 @@ export default  class Forms extends React.Component{
               <Link href="#" variant="body2" underline='none'  >
                   {"Don't have an account? Sign Up"}
               </Link>
+              <Typography component="p" 
+           sx={{
+            color:'red',
+          }}
+          >
+           {this.state.c===2 ? "**Please put your username and password":
+            this.state.errormessage}
+          </Typography>
+          
           </Box>
         </Box>
       )
@@ -81,10 +112,6 @@ export default  class Forms extends React.Component{
   }
 
   class ButtonUsage extends React.Component{
-    constructor(props){
-      super(props)
-    }
-    
     render()
     {
       return(
@@ -98,4 +125,3 @@ export default  class Forms extends React.Component{
   function Image(){
     return <img src={Econ} width="130px" height="130px"/>
   }
-
